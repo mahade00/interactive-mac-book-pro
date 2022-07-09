@@ -27,7 +27,7 @@
                         Magic Keyboard US English.
                     </p>
                     <!-- Memory start  -->
-                    <div class="pt-5">
+                    <div id="memory" class="pt-5">
                         <h5 class="fw-bold">Memory</h5>
                         <button id="eight-gb-memory" type="button " class="btn btn-light btn-outline-dark">8GB Unified
                             Memory</button>
@@ -51,9 +51,11 @@
                     <!-- Delivery option start  -->
                     <div class="pt-5">
                         <h5 class="fw-bold">Choose your delivery option</h5>
-                        <button type="button " class="btn btn-light btn-outline-dark">Friday, August 25 FREE Prime
+                        <button id="free-delivery" type="button " class="btn btn-light btn-outline-dark">Friday, August
+                            25 FREE Prime
                             Delivery</button>
-                        <button type="button " class="btn btn-light btn-outline-dark">Friday, August 21 Delivery charge
+                        <button id="delivery-with-cost" type="button " class="btn btn-light btn-outline-dark">Friday,
+                            August 21 Delivery charge
                             $20</button>
                     </div>
                     <!-- Delivery option end  -->
@@ -74,14 +76,15 @@
 
                         <div class="border-bottom py-2" style="margin-right: 280px;">
                             <h5 class="fw-bold">Extra Storage Cost <span class="price"
-                                    style="padding-left: 94px;">$0</span>
+                                    style="padding-left: 94px;">$<span id="extra-storage">0</span></span>
                             </h5>
                         </div>
 
                         <div class="border-bottom border-dark py-2" style="margin-right: 280px;">
                             <h5 class="fw-bold"> Delivery
                                 Chrage
-                                <span class="price" style="padding-left: 117px;">$0</span>
+                                <span class="price" style="padding-left: 117px;">$<span
+                                        id="delivery-charge">0</span></span>
                             </h5>
                         </div>
 
@@ -89,7 +92,8 @@
                         <div class="border-bottom  py-2" style="margin-right: 280px;">
                             <h5 class=" fw-bold">Total
                                 Price<span class="price" style="padding-left: 174px;">$ <span
-                                        id="total-price">1299</span> </span>
+                                        id="total-price">1299</span>
+                                </span>
                             </h5>
                         </div>
 
