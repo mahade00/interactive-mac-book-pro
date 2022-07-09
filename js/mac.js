@@ -4,33 +4,23 @@ function totalCalculation() {
 
     const totalPrice = document.getElementById('total-price');
     const totalPriceText = parseFloat(totalPrice.innerText);
-    // const totalPriceInner = totalPrice.innerText;
-
+    
     const generalPrice = document.getElementById('general-price');
     const generalPriceText = parseFloat(generalPrice.innerText); 
-    // const generalPriceInner=generalPrice.innerText;
 
     const extraMemory = document.getElementById('extra-memory');
     const extraMemoryText = parseFloat(extraMemory.innerText);
-    // const extraMemoryInner=extraMemory.innerText;
 
     const extraStorage = document.getElementById('extra-storage');
     const extraStorageText = parseFloat(extraStorage.innerText);
-    // const extraStorageInner=extraStorage.innerText;
 
     const deliveryCharge = document.getElementById('delivery-charge');
     const deliveryChargeText = parseFloat(deliveryCharge.innerText); 
-    // const deliveryChargeInner=  deliveryCharge.innerText;
 
-    var totalPriceCalculation = generalPriceText +  extraMemoryText + extraStorageText + deliveryChargeText;
-    
+    const totalPriceCalculation = generalPriceText +  extraMemoryText + extraStorageText + deliveryChargeText;
+
     totalPrice.innerText = totalPriceCalculation;
     total.innerText = totalPriceCalculation;
-
-    
-
-    // document.getElementById('total-price').innerText = totalPriceCalculation;  
-
 }
 
 function memoryCal(_rate) {
@@ -43,17 +33,13 @@ function storageCal(_storage) {
     const extraStorage = document.getElementById('extra-storage');
     const extraStorageText = parseFloat(extraStorage.innerText);
     extraStorage.innerText = _storage;
-
 }
 
 function deliveryCal(_delivery) {
     const deliveryCharge = document.getElementById('delivery-charge');
     const deliveryChargeText = parseFloat(deliveryCharge.innerText);    
     deliveryCharge.innerText = _delivery;
-
 }
-
-
 
 // memory start
 document.getElementById('eight-gb-memory').addEventListener('click', function () {   
@@ -93,3 +79,24 @@ document.getElementById('delivery-with-cost').addEventListener('click', function
     totalCalculation();
 })
 // delivery  end
+
+// promo code start
+document.getElementById('apply-btn').addEventListener('click', function () {
+    const total = document.getElementById('total');
+    const totalText = parseFloat(total.innerText);
+    const successCode = document.getElementById('success-code');
+    const wrongCode = document.getElementById('wrong-code');
+
+    if (document.getElementById('inputPassword2').value == 'stevekaku') {
+        total.innerText = 0.25 * totalText;
+        successCode.style.display = 'block';
+        wrongCode.style.display = 'none';
+        
+    }
+    else {
+        successCode.style.display = 'none';
+        wrongCode.style.display = 'block';
+    }
+    document.getElementById('inputPassword2').value = '';
+})
+// promo code end
